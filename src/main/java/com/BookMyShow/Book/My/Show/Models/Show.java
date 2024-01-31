@@ -1,6 +1,7 @@
 package com.BookMyShow.Book.My.Show.Models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,12 +20,15 @@ public class Show {
     @GeneratedValue(strategy = GenerationType.AUTO)
     UUID id;
 
+    @JsonIgnore
     @ManyToOne
     Hall hall;
 
+    @JsonIgnore
     @ManyToOne
     Movie movie;
 
+    @JsonIgnore
     @ManyToOne
     Screen screen;
 

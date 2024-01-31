@@ -22,6 +22,10 @@ public class Movie {
     double rating;
     double duration;
 
+
     @OneToMany(mappedBy = "movie")
     List<Ticket> tickets;
+
+    @ManyToOne
+    ApplicationUser owner;
 }

@@ -22,6 +22,9 @@ public class Hall {
     long contactNo;
     String password;
 
+    @ManyToOne
+    ApplicationUser owner;
+
     @OneToMany(mappedBy = "hall") // Instead of creating new table for hall and screen , we use mapped by to avoid creation of new tablw
     List<Screen> screens;
 
